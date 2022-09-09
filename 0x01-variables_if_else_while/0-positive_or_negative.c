@@ -8,12 +8,12 @@
  *Description: This program print if the number is positive, zero, or negative
  *Return: 0
  */
- int main(void)
- {
-    int n;
+int main(void)
+{
+	int n;
 
-    srand(time(0));
-    n = rand() - RAND_MAX / 2;
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
 /* Body of code  here */
 if (n > 0)
 {
