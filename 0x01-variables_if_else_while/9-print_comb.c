@@ -15,7 +15,7 @@ int main(void)
 	for (m = 48; m <= 57 ; m++)
 	{
 		putchar(m);
-		if (c != 57)
+		if (m != 57)
 		{
 			putchar(',');
 			putchar(' ');
