@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * _print_last_digit - This is the function
+ * print_last_digit - This is the function
  * @n: contains the value to be compared
  * Description - The program prints the last digit of a no.
  * Return: 0
