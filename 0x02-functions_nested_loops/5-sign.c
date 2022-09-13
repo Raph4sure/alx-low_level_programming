@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * _print_sign - This is the function
+ * print_sign - This is the function
  * @n: contains the value to be compared
  * Description - The program prints the sign of a number.
  * Return: 0
  */
-int _print_sign(int n)
+int print_sign(int n)
 {
 	if (n > 0)
 	{
