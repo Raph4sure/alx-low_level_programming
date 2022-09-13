@@ -3,7 +3,7 @@
 /**
  * print_to_98 - This is the Entry
  * @n: print int
- * Description: function that prints all natural numbers from n to 98, followed by a new line
+ * Description: function that prints all natural numbers from n to 98.
  * Return: 0
  */
 void print_to_98(int n)
@@ -13,5 +13,13 @@ void print_to_98(int n)
 		for (n = n; n < 98; n++)
 			printf("%d, ", n);
 		printf("%d\n", 98);
+	}
+	else
+	{
+		for (n = n; n > 98; n--)
+			printf("%d, ", n);
+		printf("%d\n", 98);
+
+
 	}
 }
