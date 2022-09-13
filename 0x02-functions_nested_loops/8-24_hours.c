@@ -1,23 +1,24 @@
-#include "main.h"
-#include <stdio.h>
+#include  "main.h"
 /**
- * _abs - This is the function
- * @n: contains the value to be compared
- * Description - The program prints the absolute value of a number.
+ * jack_bauer - This is the Entry
+ * Description: This function print every minutes of the day
  * Return: 0
  */
-int _abs(int n)
+void jack_bauer(void)
 {
-	if (n < 0)
-	{
-		return (n * (-1));
-	}
-	else if (n == 0)
-	{
-		return (0);
-	}
-	else
-	{
-		return (n);
-	}
+    int a;
+    int b;
+
+    for (a = 0; a <= 23; a++)
+    {
+        for (b = 0; b <= 59; b++)
+        {
+            _putchar (a / 10 + '0');
+            _putchar (a % 10 + '0');
+            _putchar (':');
+            _putchar (b / 10 + '0');
+            _putchar (b % 10 + '0');
+            _putchar ('\n');
+        }
+    }
 }
