@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
  * main - This is the entry
- * Description: write a program that finds and prints the sum of the even-valued terms
- * in fibonacci
+ * Description: write a program that finds and prints the sum of the 
+ * even-valued terms in fibonacci
  * Return: 0
  */
 int main(void)
