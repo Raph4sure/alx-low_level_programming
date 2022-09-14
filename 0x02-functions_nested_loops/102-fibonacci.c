@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - This is the entry
- * Description: program that prints the 50 Fibonacci nos, starting with 1 and 2.
+ * Description: program that prints the 50 Fibonacci nos, starting with 1 & 2.
  * Return: 0
  */
 int main(void)
