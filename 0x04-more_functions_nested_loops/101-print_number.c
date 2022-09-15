@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <math.h>
+#include "main.h"
 /**
  * print_number - This is the function name.
  * @n: this is the function parameter.
