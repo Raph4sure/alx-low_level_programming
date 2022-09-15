@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * void print_line - This is the function name
+ * print_line - This is the function name
  * @n: This is the function parameter
  * Description: function that draws a straight line in the terminal.
  * Return: 0
