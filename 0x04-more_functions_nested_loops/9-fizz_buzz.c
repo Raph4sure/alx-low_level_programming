@@ -2,11 +2,8 @@
 #include <stdio.h>
 /**
  * main - This is the function name
- * Description: program that prints the numbers from 1 to 100,
- * followed by a new line. But for multiples of three print Fizz 
- * nstead of the number and for the multiples of
- * five print Buzz. For numbers which are multiples of both
- * three and five print FizzBuzz.
+ * Description: program that prints the numbers from 1 to 100
+ * followed by a new line.
  * Return: 0
  */
 int main(void)
