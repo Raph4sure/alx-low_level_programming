@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * print_number - This is the function name.
- * @n: this is the function parameter.
- * Description: function that prints an integer.
+ * print_number - This is the function name
+ * @n: this is the function parameter
+ * Description: function that prints an integer
  * Return: 0
  */
 void print_number(int n)
