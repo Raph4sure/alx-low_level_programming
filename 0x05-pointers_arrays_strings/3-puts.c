@@ -6,7 +6,7 @@
  * @str: input string
  * Return: nothing
  */
-int _puts(char *str)
+void _puts(char *str)
 {
 	int index;
 
