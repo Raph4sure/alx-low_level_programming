@@ -2,15 +2,17 @@
 /**
  * _puts - function to print string
  * Description - prints a tring, followed by a new line
- * *@str: function that accepts an input saved into str
+ * @str: function that accepts an input saved into str
  * Return: Always 0 (Success)
  *
  */
 void _puts(char *str)
 {
-	for(; *str != '\0'; str++)
+	int index;
+
+	for(index = 0; str[index] != '\0'; index++)
 	{
-		_putchar(*str);
+		_putchar(str[index]);
 	}
 	_putchar('\n');
 }
