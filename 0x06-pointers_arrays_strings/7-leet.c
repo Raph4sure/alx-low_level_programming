@@ -8,20 +8,20 @@
 
 char *leet(char *n)
 {
-	int i, x;
-	int find[] = {'a', 'A', 'e', 'E', 'o', 'O', 't' 'T', 'l', 'L'};
-	int replacer[] = {'4', '3', '0', '7', '1'};
+	char alpha[] = "a4A4e3E3o0O0t7T7l1L1";
+	int i;
+	int j;
 
-	for (i = 0; n[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (x = 0; x <= 9; x++)
+		for (j = 0; alpha[j] != '\0'; j++)
 		{
-			if (n[i] == find[x])
+			if (s[i] == alpha[j])
 			{
-				n[i] = replacer[x / 2];
-				x = 9;
+				s[i] = alpha[j + 1];
+				break;
 			}
 		}
 	}
-	return (n);
+	return (s);
 }
