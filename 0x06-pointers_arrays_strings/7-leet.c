@@ -1,10 +1,10 @@
 /**
  * leet - function that encodes a string into 1337.
- * @n: input
- * Return: n
+ * @s: input
+ * Return: s
  */
 
-char *leet(char *n)
+char *leet(char *s)
 {
 	char alpha[] = "a4A4e3E3o0O0t7T7l1L1";
 	int i;
