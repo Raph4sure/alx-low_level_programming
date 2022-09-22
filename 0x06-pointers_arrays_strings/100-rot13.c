@@ -1,7 +1,8 @@
 #include "main.h"
+
 /**
  * rot13 - encodes a string using rot13
- * @s : input string.
+ * @s: input string.
  * Return: s
  */
 
@@ -21,7 +22,7 @@ char *rot13(char *s)
 				break;
 			}
 		}
-		count++
+		count++;
 	}
 	return (s);
 }
