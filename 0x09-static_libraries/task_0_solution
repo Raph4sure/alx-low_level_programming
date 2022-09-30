@@ -1,0 +1,59 @@
+For static library task 0 
+
+Make 0x09-static_libraries directory and cd into it
+
+Create your README.md file and insert a description into it...
+
+Then create your main.h  and copy all the prototypes be given to you on intranet into it.. You should wrap your prototypes with file guards like 👇🏼
+
+#ifndef MAIN_H
+#define MAIN_H
+
+.....prototypes 
+.....prototypes 
+
+#endif //MAIN_H
+
+Then you can go to each directory of your needed files,  copy then out and move them to static_lib directory alternatively you can go to the directory 0x09_static_library and run a command.
+
+let's say you want to copy 0-isupper.c to the 0x09_static_library command so you can convert to object file, you'd go first find where you did 0-isupper.c
+
+now this file is in the directory, 0x04-more_functions_nested_loops so you know your path already. 
+
+so, you'd stay in the 0x09_static_library and type this command:
+
+cp ../0x04-more_functions_nested_loops/0-isupper.c 0-isupper.c
+
+now, the two dots are important cos they're used to refer to the current working directory parent's directory, and then the files you want are then brought into your current working directory.
+thus, you have copied the 0-isupper.c file and also named it as the 0-isupper.c file in the 0x09_static_library directory, and it matches the prototypes you've already put in your main.h file
+
+
+After you've gotten all your needed C files including _putchar.c file, you can now convert them to object files with .o extensions
+By running 
+
+ gcc -c *.c 
+
+This command converts all the ".c" files to ".o" files which are known as object files.
+-c flag compile and assemble your c files with linking it.
+
+Then you can type ls command to confirm the list of .c and .o files in your static_lib directory.. 
+
+
+After this, while being in the same directory on your command line or sandbox or gitbash, you type:
+
+ar -rc libmy.a *.o
+
+what this does is create the libmy.a library as a file and then stores all the ".o" files in it. now, you have created your static library.
+
+The next thing to do is to run:
+
+ranlib libmy.a
+
+
+What this does is to index the files in your static library. 
+
+And you can now run 
+
+ar -t libmy.a to check the list of your file content.. 
+
+After this, you're done and you can add, commit and push to github
