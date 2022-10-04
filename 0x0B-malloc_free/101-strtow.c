@@ -44,7 +44,7 @@ char **helper(int word, int len, char *str, char **s)
  * Return: return char value
  */
 
-char **strtow(char *str)
+char **strow(char *str)
 {
 	int len, i, j, size, k, word;
 	char **s;
@@ -84,5 +84,6 @@ char **strtow(char *str)
 			free(s);
 		}
 	}
-	s = helper(wood, len, str, s);
+	s = helper(word, len, str, s);
+	return (s);
 }
