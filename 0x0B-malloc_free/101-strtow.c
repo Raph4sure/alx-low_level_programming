@@ -1,16 +1,14 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
- * helper -helps function
+ * helper - helps function
  * @word: wordcount
  * @len: length
  * @str: string to go through
  * @s: array you are assigning
  * Return: char value
  */
-
 char **helper(int word, int len, char *str, char **s)
 {
 	int i, k, j;
@@ -37,14 +35,12 @@ char **helper(int word, int len, char *str, char **s)
 	s[word + 1] = NULL;
 	return (s);
 }
-
 /**
  * strtow - string to words
  * @str: string to check
  * Return: return char value
  */
-
-char **strow(char *str)
+char **strtow(char *str)
 {
 	int len, i, j, size, k, word;
 	char **s;
@@ -56,7 +52,7 @@ char **strow(char *str)
 	while (str[len] != '\0')
 	{
 		if (str[0] != ' ')
-			word++;
+		word++;
 		if (str[len] != ' ' && str[len - 1] == ' ' && len != 0)
 			word++;
 		len++;
