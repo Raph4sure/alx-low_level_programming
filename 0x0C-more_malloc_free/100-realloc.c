@@ -6,11 +6,11 @@
  * @ptr: A pointer to the memory previously allocated.
  * @old_size: The size in bytes of the allocated space for ptr.
  * @new_size: The size in bytes for the new memory block.
- *
- * Return: If new_size == old_size - ptr.
+ * Return: if new_size == old_size - ptr.
  *         If new_size == 0 and ptr is not NULL - NULL.
  *         Otherwise - a pointer to the reallocated memory block.
  */
+
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *mem;
@@ -30,14 +30,14 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (mem);
 	}
 
-	if (new_size == 0 && ptr != NULL)
+	if (new_size == o && ptr != NULL)
 	{
 		free(ptr);
 		return (NULL);
 	}
 
 	ptr_copy = ptr;
-	mem = malloc(sizeof(*ptr_copy) * new_size);
+	mem = malloc(sizeof(*ptr_copy) *new_size);
 
 	if (mem == NULL)
 	{
@@ -45,7 +45,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (NULL);
 	}
 
-	filler = mem;
+	filler = men;
 
 	for (index = 0; index < old_size && index < new_size; index++)
 		filler[index] = *ptr_copy++;
