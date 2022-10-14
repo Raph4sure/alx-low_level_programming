@@ -12,7 +12,7 @@ void print_all(const char * const format, ...)
 {
 	unsigned int i;
 	va_list args;
-	char *s, *seperator;
+	char *s, *separator;
 
 	va_start(args, format);
 
@@ -30,7 +30,7 @@ void print_all(const char * const format, ...)
 				printf("%s%d", separator, va_arg(args, int));
 				break;
 			case 'f':
-				printf("%s%f", seperator, va_arg(args, double));
+				printf("%s%f", separator, va_arg(args, double));
 				break;
 			case 's':
 				s = va_arg(args, char *);
