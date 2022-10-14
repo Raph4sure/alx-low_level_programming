@@ -6,7 +6,7 @@
 /**
  * print_strings - prints strings, followed by a new line
  * @separator: string to be printed between string
- * @n: numbers of strings
+ * @n: number of string
  * Return: void
  */
 
@@ -14,9 +14,9 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
 	char *s;
-	va_list string;
+	va_list strings;
 
-	if (separtor == NULL)
+	if (separator == NULL)
 		separator = "";
 
 	va_start(strings, n);
