@@ -1,6 +1,6 @@
-#include "lists.h"
-#include <stdlib.h>
+#include "stdlib.h"
 #include <stdio.h>
+#include "lists.h"
 #include <string.h>
 /**
  * add_note - adds a new node
