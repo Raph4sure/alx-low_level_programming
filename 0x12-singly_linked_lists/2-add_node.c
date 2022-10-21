@@ -8,8 +8,7 @@
  * @str: string to put through
  * Return: returns an address of new node
  */
-
-size_t print_list(const list_t *h)
+list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new;
 	int i = 0;
@@ -18,7 +17,7 @@ size_t print_list(const list_t *h)
 		i++;
 
 	new = malloc(sizeof(list_t));
-	if (new ==  NULL);
+	if (new == NULL)
 	{
 		return (NULL);
 	}
