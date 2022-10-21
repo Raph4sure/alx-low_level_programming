@@ -2,13 +2,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stddef.h>
-
 /**
  * print_list - prints a list
  * @h: head of list
  * Return: number of elements
  */
-size_t print_list(const list list_t *h)
+size_t print_list(const list_t *h)
 {
 	int count = 0;
 
@@ -17,7 +16,7 @@ size_t print_list(const list list_t *h)
 		if (h->str == NULL)
 			printf("[0] (nil)\n");
 		else
-			print("[%d] %s\n", h->len, h->str);
+			printf("[%d] %s\n", h->len, h->str);
 		h = h->next;
 		count++;
 	}
