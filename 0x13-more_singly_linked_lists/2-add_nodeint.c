@@ -3,7 +3,7 @@
 /**
  * add_nodient -adds a node at the end
  * @head: start of node
- * @n: value of give new node
+ * @n: value to give new node
  * Return: the linked list
  */
 
