@@ -11,7 +11,7 @@ addr_list *add_nodeaddr(addr_list **head, const void *addr)
 	if (new_node == NULL)
 	{
 		free_listaddr(*head);
-		exit (98);
+		exit(98);
 	}
 	new_node->addr = addr;
 	new_node->next = *head;
@@ -25,6 +25,7 @@ addr_list *add_nodeaddr(addr_list **head, const void *addr)
 void free_listaddr(addr_list *head)
 {
 	addr_list *current_node;
+
 	while (head != NULL)
 	{
 		current_node = head;

@@ -1,12 +1,10 @@
 #include "lists.h"
-
 /**
- * add_nodient - adds a node at the end
+ * add_nodeint - adds a node at the end
  * @head: start of node
  * @n: value to give new node
  * Return: the linked list
  */
-
 listint_t *add_nodeint(listint_t **head, const int n)
 {
 	listint_t *new;
