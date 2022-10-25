@@ -1,69 +1,68 @@
 #include "lists.h"
-
 /**
- * free_listp - frees a linked list
- * @head: head of a list.
- * Return: no return.
+ *add_nodeaddr - A function that mallocs a new space for a list
+ *@head: A double pointer that points to my second list header, head_2.
  */
-
-void free_listp(listp_t **head)
+addr_list *add_nodeaddr(addr_list **head, const void *addr)
 {
-	listp_t *temp;
-	listp_t *curr;
+	addr_list *new_node;
 
-	if (head != NULL)
+	new_node = malloc(sizeof(addr_list));
+	if (new_node == NULL)
 	{
-		curr = *head;
-		while ((temp = curr) != NULL)
-		{
-			curr = curr->next;
-			free(temp);
-		}
-		*head = NULL;
+		free_listaddr(*head);
+		exit (98);
 	}
+	new_node->addr = addr;
+	new_node->next = *head;
+	*head = new_node;
+	return (new_node);
 }
-
 /**
- * print_listint_safe - prints a linked list.
- * @head: head of a list.
- * Return: number of nodes in the lists.
+ *free_listaddr - a function that frees a linked list
+ *@head: a pointer variable that points to the start of a newly made list
  */
-
-size_t print_listint_safe(const listint_t *head)
+void free_listaddr(addr_list *head)
 {
-	size_t nnodes = 0;
-	listp_t *hptr, *new, *add;
-
-	hptr = NULL;
+	addr_list *current_node;
 	while (head != NULL)
 	{
-		new = malloc(sizeof(listp_t));
-
-		if (new == NULL)
-			exit(98);
-
-		new->p = (void *)head;
-		new->next = hptr;
-		hptr = new;
-
-		add = hptr;
-
-		while (add->next != NULL)
-		{
-			add = add->next;
-			if (head == add->p)
-			{
-				printf("-> [%p] %d\n", (void *)head, head->n);
-				free_listp(&hptr);
-				return (nnodes);
-			}
-		}
-
-		printf("[%p] %d\n", (void *)head, head->n);
+		current_node = head;
 		head = head->next;
-		nnodes++;
+		free(current_node);
 	}
+}
+/**
+ *print_listint_safe - a function that prints the node and the
+ *number within a node,
+ *Return: the number of nodes
+ */
+size_t print_listint_safe(const listint_t *head)
+{
+	addr_list *current_NewNode;
+	addr_list *head_2;
+	size_t i;
 
-	free_listp(&hptr);
-	return (nnodes);
+	i = 0;
+	head_2 = NULL;
+	while (head != NULL)
+	{
+		current_NewNode = head_2;
+		while (current_NewNode != NULL)
+		{
+			if (head == current_NewNode->addr)
+			{
+				printf("->[%p] %d\n", (void *)head, head->n);
+				free_listaddr(head_2);
+				return (i);
+			}
+			current_NewNode = current_NewNode->next;
+		}
+		printf("[%p] %d\n", (void *)head, head->n);
+		add_nodeaddr(&head_2, head);
+		head = head->next;
+		i++;
+	}
+	free_listaddr(head_2);
+	return (i);
 }
