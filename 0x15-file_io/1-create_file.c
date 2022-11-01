@@ -3,7 +3,7 @@
 /**
  * create_file - creates a file.
  * @filename: A pointer to the name of the file to create.
- * @text_context: A pointer to a string to write to the file.
+ * @text_content: A pointer to a string to write to the file.
  * Return: if the function fails - -1, otherwisw - 1.
  */
 
@@ -20,7 +20,7 @@ int create_file(const char *filename, char *text_content)
 			len++;
 	}
 
-	0 = open(filename, O-CREAT | O_RDWR | O_TRUNC, 0600);
+	o = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 	w = write(o, text_content, len);
 
 	if (o == -1 || w == -1)
@@ -28,5 +28,5 @@ int create_file(const char *filename, char *text_content)
 
 	close(o);
 
-	return(1);
+	return (1);
 }
